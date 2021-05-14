@@ -1,4 +1,4 @@
-%ifarch %{ix86} %{x8664} %{arm} mips64 mips64le ppc64 ppc64le s390x
+%ifarch %{ix86} %{x8664} %{arm} aarch64 mips64 mips64le ppc64 ppc64le s390x
 %define		with_go	1
 %endif
 
