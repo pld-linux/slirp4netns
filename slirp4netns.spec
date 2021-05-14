@@ -1,3 +1,7 @@
+%ifarch %{ix86} %{x8664} %{arm} mips64 mips64le ppc64 ppc64le s390x
+%define		with_go	1
+%endif
+
 Summary:	User-mode networking for unprivileged network namespaces
 Name:		slirp4netns
 Version:	1.1.9
@@ -10,7 +14,7 @@ URL:		https://github.com/rootless-containers/slirp4netns
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.11.2
 BuildRequires:	glib2-devel
-BuildRequires:	go-md2man
+%{?with_go:BuildRequires:	go-md2man}
 BuildRequires:	libcap-devel
 BuildRequires:	libseccomp-devel
 BuildRequires:	libslirp-devel >= 4.1.0
@@ -24,6 +28,7 @@ network namespaces.
 
 %prep
 %setup -q
+%{!?with_go:touch slirp4netns.1}
 
 %build
 %{__aclocal}
