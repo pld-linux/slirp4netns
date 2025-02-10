@@ -4,12 +4,12 @@
 
 Summary:	User-mode networking for unprivileged network namespaces
 Name:		slirp4netns
-Version:	1.3.1
+Version:	1.3.2
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://github.com/rootless-containers/slirp4netns/archive/v%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	a6569fb0ea2e212aa553c67faddcac6d
+# Source0-md5:	2caed30622194e73c5065c9cd2a64bec
 URL:		https://github.com/rootless-containers/slirp4netns
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.11.2
